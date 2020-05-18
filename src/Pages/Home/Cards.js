@@ -4,6 +4,8 @@ import { Card } from 'antd';
 const { Meta } = Card;
 
 export default function Cards() {
+  // console.log(props);
+  
     return (
         <div style={{margin:"20px"}}>
             <Card
@@ -16,3 +18,4 @@ export default function Cards() {
         </div>
     )
 }
+

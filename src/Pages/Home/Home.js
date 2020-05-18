@@ -4,12 +4,19 @@ import Cards from './Cards'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-import { Redirect } from 'react-router-dom'
+// import { Redirect } from 'react-router-dom'
+// import Carousels from './Carousels/Carousels'
 
-function Home() {
+function Home(props) {
+  console.log("....");
+  
+  console.log(props.category);
+  // const category_data =props.category[0]
+  
     return (
         <div>
             <Cards />
+            {/* <Carousels /> */}
         </div>
     )
 }

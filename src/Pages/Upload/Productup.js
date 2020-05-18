@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Input, Button, Select } from 'antd';
+import { Form, Input, Button, Select,Switch } from 'antd';
 import { Spin } from 'antd';
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
@@ -61,7 +61,7 @@ class Productup extends Component {
             },
           ]}
         >
-          <Input />
+          <Input placeholder="Enter the name of Products"/>
         </Form.Item>
         <Form.Item
           name="category"
@@ -85,6 +85,51 @@ class Productup extends Component {
 
           </Select>
         </Form.Item>
+        <Form.Item
+          name="url"
+          label="Image Url"
+          rules={[
+            {
+              required: true,
+              type:"url"
+              
+            },
+           
+          ]}
+        >
+          <Input placeholder="Enter the url" />
+        </Form.Item>
+        <Form.Item
+          name="price"
+          label="Price"
+          rules={[
+            {
+              required: true,
+              type:"number"
+              
+            },
+           
+          ]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          name="Brand"
+          label="Brand"
+          rules={[
+            {
+              required: true,
+              type:"String"
+              
+            },
+           
+          ]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item name="Offer" label="Offer" valuePropName="checked">
+        <Switch />
+      </Form.Item>
 
 
         <Form.Item {...tailLayout}>

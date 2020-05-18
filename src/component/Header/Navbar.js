@@ -18,7 +18,11 @@ function Navbar(props) {
     return (
       <Fragment >
 <Header className="container">
-      <div className="logo"><img src={logo} height='56px' /></div>
+      <div className="logo">
+        <NavLink to="/">
+          <img src={logo} height='56px' />
+        </NavLink>
+      </div>
 <div className="search"> 
   <Searchs />
 </div>
